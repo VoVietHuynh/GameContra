@@ -10,6 +10,7 @@ public:
 	enum Walltype
 	{
 		Wall = 100,
+		Water = 200,
 	} _walltype = Walltype::Wall;
 
 	OWall();

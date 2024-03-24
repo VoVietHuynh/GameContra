@@ -12,6 +12,8 @@ Map::Map()
 	position = D3DXVECTOR2(0, 0);
 
 	objectTag["Wall"] = OWall::Wall;
+	objectTag["Water"] = OWall::Water;
+
 
 	//Chạy wallView trước
 	for (int i = 0; i < info->numObjectGroups; i++)
@@ -80,6 +82,9 @@ Object* Map::CreateObject(MapObject* _mapobject)
 		{
 		case OWall::Wall:
 			obj = new OWall();
+			break;
+		case OWall::Water:
+			obj = new Water();
 			break;
 		default:
 			return new Object();

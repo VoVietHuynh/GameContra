@@ -3,7 +3,7 @@
 #include "TileSet.h"
 #include "GameDefine.h"
 #include "InfoMap.h"
-#include "OWall.h"
+#include "Water.h"
 
 using namespace Define;
 
