@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Map">
+      <UniqueIdentifier>{06250ddd-d096-4707-a466-31c85084f294}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{43e5cefe-7663-40d6-a194-d126bf8330bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sences">
+      <UniqueIdentifier>{86ade1ed-2999-426c-a99a-0b02534b1afa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TinyXMl">
+      <UniqueIdentifier>{5966f949-bf17-4890-9b0b-6a0af42dfa5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player">
+      <UniqueIdentifier>{5a40fc21-a108-41af-8059-c1456cef771a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Global">
+      <UniqueIdentifier>{8047e6d6-e6c5-428b-b620-75f37bb1333d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Global\GUI">
+      <UniqueIdentifier>{06529264-d790-4959-b8a1-ed7a67aa26ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Wall">
+      <UniqueIdentifier>{8c1cc3e2-d1f2-47cd-970f-885cefc0a736}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TinyXML\tinystr.cpp">
+      <Filter>TinyXMl</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxml.cpp">
+      <Filter>TinyXMl</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxmlerror.cpp">
+      <Filter>TinyXMl</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxmlparser.cpp">
+      <Filter>TinyXMl</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoSprite.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoMap.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Sences</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewport.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="TileSet.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCollision.cpp">
+      <Filter>Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerController.cpp">
+      <Filter>Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="OWall.cpp">
+      <Filter>Object\Wall</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawLine.cpp">
+      <Filter>Global\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>Global\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawString.cpp">
+      <Filter>Global\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MapObject.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MapObjectGroup.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TinyXML\tinystr.h">
+      <Filter>TinyXMl</Filter>
+    </ClInclude>
+    <ClInclude Include="TinyXML\tinyxml.h">
+      <Filter>TinyXMl</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoSprite.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoMap.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Sences</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewport.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="TileSet.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDefine.h" />
+    <ClInclude Include="ObjectManager.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCollision.h">
+      <Filter>Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerController.h">
+      <Filter>Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="OWall.h">
+      <Filter>Object\Wall</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawLine.h">
+      <Filter>Global\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI.h">
+      <Filter>Global\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawString.h">
+      <Filter>Global\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="MapObject.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="MapObjectGroup.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<Textures textureId="bill_animation">
+    		<Sprite id="0_stand" x="2" y="31"  w="23" h="34"/>
+		<Sprite id="1_run1" x="3" y="71"  w="20" h="31"/>
+		<Sprite id="2_run2" x="25" y="68"  w="16" h="34"/>
+		<Sprite id="3_run3" x="43" y="68"  w="18" h="34"/>
+		<Sprite id="4_jumping1" x="118" y="45"  w="16" h="20"/>
+		<Sprite id="5_jumping2" x="136" y="49"  w="19" h="16"/>
+		<Sprite id="6_jumping3" x="157" y="45"  w="16" h="20"/>
+		<Sprite id="7_jumping4" x="175" y="48"  w="19" h="16"/>
+		<Sprite id="8_sitting1" x="84" y="49"  w="32" h="16"/>
+		<Sprite id="9_die" x="61" y="121"  w="32" h="10"/>
+		
+	</Textures>
