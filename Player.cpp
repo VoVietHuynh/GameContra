@@ -33,8 +33,11 @@ Animation::DataAnimMap dataM()
 	Animation::DataAnimMap data;
 	//Small
 	data[Player::Blue + Object::Standing] = { 0, 0 };
-	data[Player::Blue + Object::Running] = { 1, 2, 3 };
-	data[Player::Blue + Object::Jumping] = { 4, 5, 6 };
+	data[Player::Blue + Object::Running] = { 1, 5, 5 };
+	data[Player::Blue + Object::Jumping] = { 6, 7};
+	data[Player::Blue + Object::Sitting] = { 10, 10 };
+	data[Player::Blue + Object::Swimming] = { 10, 10 };
+
 
 	return data;
 }
@@ -92,6 +95,8 @@ void Player::OnCollision(Object* obj)
 
 void Player::Update(float gameTime, Keyboard* key)
 {
+	if (!_playerCollision->isGround) State = Object::Jumping;
+
 	//Update Animation
 	UpdateAnimation(gameTime);
 
@@ -131,6 +136,6 @@ void Player::Render(Viewport* viewport)
 		_anim->Render(viewport);
 	}
 
-	//GUI::GetInstance()->Render("Life: ", { 150, 200, 200, 235 });
-	//GUI::GetInstance()->Render(_life, { 210, 200, 230, 235 });
+	GUI::GetInstance()->Render("State: ", { 150, 200, 200, 235 });
+	GUI::GetInstance()->Render(State, { 210, 200, 230, 235 });
 }

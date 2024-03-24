@@ -42,6 +42,7 @@ public:
 		Attacking = 30,
 		Sitting = 40,
 		Dying = 50,
+		Swimming = 60,
 	};
 	Stateobject State;
 	Object();

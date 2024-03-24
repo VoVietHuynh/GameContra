@@ -7,6 +7,7 @@ PlayerCollision::PlayerCollision()
 	player = Player::GetInstance();
 	_functionMap[Object::Standing] = &PlayerCollision::StandCollision;
 	_functionMap[Object::Running] = &PlayerCollision::RunCollision;
+	_functionMap[Object::Jumping] = &PlayerCollision::JumpCollision;
 	_functionMap[Object::Sitting] = &PlayerCollision::StandCollision;
 }
 
@@ -43,6 +44,23 @@ void PlayerCollision::CheckCollisionWall(Object* _wall)
 	OWall* wall = dynamic_cast<OWall*>(_wall);
 	switch (wall->_walltype)
 	{
+	case OWall::Wall:
+		if (_side.y == Collision::BOTTOM && player->State == Object::Jumping)
+		{
+			player->State = Object::Standing;
+		}
+		//if (_side.y == Collision::BOTTOM && player->State == Object::Sitting)
+		//{
+		//	player->State = Object::Jumping;
+		//	player->SetPositionY(player->GetPosition().y - 2);
+		//}
+		break;
+	case OWall::Water:
+		if (_side.y == Collision::BOTTOM && player->State == Object::Jumping)
+		{
+			player->State = Object::Swimming;
+		}
+		break;
 	default:
 		break;
 	}
@@ -53,7 +71,8 @@ void PlayerCollision::PlayCollisionF()
 {
 	//Lấy Function từ player state
 	FunctionMap::iterator it = _functionMap.find(player->State);
-	//(it->second) là con trỏ hàm lấy từ <map> = &StandCollision
+	//(it->second) là con trỏ hàm lấy từ <map> = &StandCollision(
+	if (it != _functionMap.end())
 	(this->*(it->second))();	//	(this->*(it->second)) = this->StandCollision
 }
 
@@ -61,6 +80,12 @@ void PlayerCollision::PlayCollisionF()
 void PlayerCollision::StandCollision()
 {
 }
+
+//Va chạm khi đứng
+void PlayerCollision::JumpCollision()
+{
+}
+
 
 //Va chạm khi chạy
 void PlayerCollision::RunCollision()

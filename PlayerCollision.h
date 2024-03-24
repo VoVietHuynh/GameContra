@@ -25,6 +25,7 @@ public:
 	void PlayCollisionF();
 
 	void StandCollision();
+	void JumpCollision();
 	void RunCollision();
 };
 
