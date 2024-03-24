@@ -112,6 +112,9 @@
     <ClCompile Include="debug.cpp">
       <Filter>Global</Filter>
     </ClCompile>
+    <ClCompile Include="Water.cpp">
+      <Filter>Object\Wall</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TinyXML\tinystr.h">
@@ -192,6 +195,9 @@
     </ClInclude>
     <ClInclude Include="debug.h">
       <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Water.h">
+      <Filter>Object\Wall</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -155,6 +155,7 @@
     <ClCompile Include="TinyXML\tinyxmlparser.cpp" />
     <ClCompile Include="Viewport.cpp" />
     <ClCompile Include="OWall.cpp" />
+    <ClCompile Include="Water.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +186,7 @@
     <ClInclude Include="TinyXML\tinyxml.h" />
     <ClInclude Include="Viewport.h" />
     <ClInclude Include="OWall.h" />
+    <ClInclude Include="Water.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
