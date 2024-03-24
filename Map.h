@@ -4,6 +4,7 @@
 #include "GameDefine.h"
 #include "InfoMap.h"
 #include "Water.h"
+#include "OEnemy.h"
 
 using namespace Define;
 

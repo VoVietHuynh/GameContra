@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<Textures textureId="enemy_animation">
+    		<Sprite id="0_soldier_run" x="0" y="0"  w="16" h="32"/>
+		<Sprite id="1_soldier_run" x="19" y="0"  w="16" h="32"/>
+		<Sprite id="0_soldier_run" x="37" y="0"  w="16" h="32"/>
+		<Sprite id="0_soldier_run" x="54" y="0"  w="16" h="32"/>
+		<Sprite id="0_soldier_run" x="72" y="0"  w="16" h="32"/>
+		<Sprite id="0_soldier_run" x="90" y="0"  w="16" h="32"/>
+		
+		
+
+
+		
+	</Textures>

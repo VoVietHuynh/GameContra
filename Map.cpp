@@ -13,6 +13,7 @@ Map::Map()
 
 	objectTag["Wall"] = OWall::Wall;
 	objectTag["Water"] = OWall::Water;
+	objectTag["Soldier"] = OEnemy::Soldier;
 
 
 	//Chạy wallView trước
@@ -85,6 +86,16 @@ Object* Map::CreateObject(MapObject* _mapobject)
 			break;
 		case OWall::Water:
 			obj = new Water();
+			break;
+		default:
+			return new Object();
+		}
+		break;
+	case Object::Enemy:
+		switch (objectTag[_mapobject->name])
+		{
+		case OEnemy::Soldier:
+			obj = new OEnemy();
 			break;
 		default:
 			return new Object();

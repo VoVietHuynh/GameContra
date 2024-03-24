@@ -25,6 +25,9 @@
     <Filter Include="Object\Wall">
       <UniqueIdentifier>{8c1cc3e2-d1f2-47cd-970f-885cefc0a736}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Enemy">
+      <UniqueIdentifier>{46e3e84f-f410-4f84-a244-20d3f7fbdf7c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TinyXML\tinystr.cpp">
@@ -115,6 +118,9 @@
     <ClCompile Include="Water.cpp">
       <Filter>Object\Wall</Filter>
     </ClCompile>
+    <ClCompile Include="OEnemy.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TinyXML\tinystr.h">
@@ -198,6 +204,9 @@
     </ClInclude>
     <ClInclude Include="Water.h">
       <Filter>Object\Wall</Filter>
+    </ClInclude>
+    <ClInclude Include="OEnemy.h">
+      <Filter>Object\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

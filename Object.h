@@ -32,6 +32,7 @@ public:
 	{
 		Wall,
 		Player,
+		Enemy
 	}Tag;
 
 	enum Stateobject
