@@ -39,6 +39,7 @@ public:
 	void JumpState();
 	void DeadState();
 	void SitState();
+	void SwimState();
 	void PlayControllerF();
 	void Update(float gameTime, Keyboard* key);
 };

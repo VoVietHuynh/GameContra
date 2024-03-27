@@ -229,7 +229,7 @@ void Object::OnCollision(Object *obj, float gameTime)
 				if (obj->Tag == Object::Wall) //Nếu là tường đi xuyên
 				{
 					//Nếu là tường đi xuyên
-					if (dynamic_cast<OWall*>(obj)->_walltype == OWall::Wall && obj->_kind == 0)
+					if (dynamic_cast<OWall*>(obj)->_walltype == OWall::Wall && obj->_kind == 1)
 					{
 						//Đụng đáy thì đi lên tường
 						if (side.y == Collision::BOTTOM)

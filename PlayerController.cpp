@@ -14,6 +14,7 @@ PlayerController::PlayerController()
 	_functionMap[Object::Jumping] = &PlayerController::JumpState;
 	_functionMap[Object::Dying] = &PlayerController::DeadState;
 	_functionMap[Object::Sitting] = &PlayerController::SitState;
+	_functionMap[Object::Swimming] = &PlayerController::SwimState;
 }
 
 PlayerController::~PlayerController()
@@ -24,7 +25,7 @@ PlayerController::~PlayerController()
 void PlayerController::StandState() //reset all state
 {
 	player->State = player->GetVelocity().x != 0 ? Object::Running : Object::Standing;
-	player->SetBound(20, 40);
+	player->SetBound(20, 35);
 
 	if (key->IsKeyDown(Dik_JUMP))
 	{
@@ -68,13 +69,25 @@ void PlayerController::DeadState()
 void PlayerController::SitState()
 {
 	player->State = Object::Sitting;
-	player->SetBound(40, 20);
+	player->SetBound(32, 16);
 	if (key->GIsKeyUp(Dik_DOWN))
 	{
 		StandState();
 		return;
 	}
 
+}
+
+void PlayerController::SwimState()
+{
+	player->State = Object::Swimming;
+	player->SetBound(25, 16);
+	if (key->IsKeyDown(Dik_JUMP))
+	{
+		JumpState();
+		player->SetVelocityY(-Gravity);
+		return;
+	}
 }
 
 void PlayerController::MoveX()

@@ -34,9 +34,11 @@ Animation::DataAnimMap dataM()
 	//Small
 	data[Player::Blue + Object::Standing] = { 0, 0 };
 	data[Player::Blue + Object::Running] = { 1, 5, 5 };
-	data[Player::Blue + Object::Jumping] = { 6, 7};
+	data[Player::Blue + Object::Jumping] = { 6, 9};
 	data[Player::Blue + Object::Sitting] = { 10, 10 };
-	data[Player::Blue + Object::Swimming] = { 10, 10 };
+	data[Player::Blue + Object::Dying] = { 11, 11 };
+	data[Player::Blue + Object::Diving] = { 12, 13 };
+	data[Player::Blue + Object::Swimming] = { 15, 15 };
 
 
 	return data;
@@ -60,7 +62,7 @@ void Player::Init()
 	Animation::DataAnimMap data = dataM();
 	_anim = new Animation(PlayerXML, PlayerPNG);
 	_anim->SetDataAnimation(data);
-	SetBound(20, 40);
+	SetBound(20, 35);
 }
 
 void Player::BeforeUpdate(float gameTime, Keyboard* key)

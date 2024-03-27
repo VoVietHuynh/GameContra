@@ -44,6 +44,7 @@ public:
 		Sitting = 40,
 		Dying = 50,
 		Swimming = 60,
+		Diving = 70,
 	};
 	Stateobject State;
 	Object();

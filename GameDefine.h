@@ -43,7 +43,7 @@ namespace Define
 
 	//PlayerRun
 	const float RunSpeed = 1.0f;
-	const float Gravity = -1.75f;
+	const float Gravity = -2.0f;
 
 	//Enemy
 	const float EnemySpeed = 1.0f;
