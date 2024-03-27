@@ -15,6 +15,7 @@ PlayerController::PlayerController()
 	_functionMap[Object::Dying] = &PlayerController::DeadState;
 	_functionMap[Object::Sitting] = &PlayerController::SitState;
 	_functionMap[Object::Swimming] = &PlayerController::SwimState;
+	_functionMap[Object::Diving] = &PlayerController::DivingState;
 }
 
 PlayerController::~PlayerController()
@@ -88,12 +89,29 @@ void PlayerController::SwimState()
 		player->SetVelocityY(-Gravity);
 		return;
 	}
+
+	if (key->IsKeyDown(Dik_DOWN))
+	{
+		DivingState();
+		return;
+	}
+}
+
+void PlayerController::DivingState()
+{
+	player->State = Object::Diving;
+	player->SetBound(16, 13);
+	if (key->GIsKeyUp(Dik_DOWN))
+	{
+		SwimState();
+		return;
+	}
 }
 
 void PlayerController::MoveX()
 {
 	//Nếu chết rồi không có di chuyển
-	if (player->State == Object::Dying || player->State == Object::Sitting)
+	if (player->State == Object::Dying || player->State == Object::Sitting || player->State == Object::Diving)
 	{
 		player->SetVelocityX(0);
 		return;
