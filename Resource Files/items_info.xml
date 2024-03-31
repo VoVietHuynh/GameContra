@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<Textures textureId="items_animation">
+    		<Sprite id="0_aircraft_B" x="357" y="10"  w="24" h="15"/>
+		<Sprite id="1_aircraft_F" x="383" y="10"  w="24" h="15"/>
+		<Sprite id="2_aircraft_L" x="409" y="10"  w="24" h="15"/>
+		<Sprite id="3_aircraft_M" x="435" y="10"  w="24" h="15"/>
+		<Sprite id="4_aircraft_R" x="461" y="10"  w="24" h="15"/>
+		<Sprite id="5_aircraft_S" x="487" y="10"  w="24" h="15"/>
+		<Sprite id="6_aircraft_Fly" x="331" y="11"  w="24" h="11"/>
+		<Sprite id="7_falcon" x="0" y="125"  w="32" h="32"/>
+		<Sprite id="8_falcon" x="34" y="125"  w="32" h="32"/>
+		<Sprite id="9_falcon" x="68" y="125"  w="32" h="32"/>
+		<Sprite id="10_falcon" x="102" y="125"  w="32" h="32"/>
+		<Sprite id="11_falcon" x="136" y="125"  w="32" h="32"/>
+		<Sprite id="12_falcon" x="170" y="125"  w="32" h="32"/>
+		<Sprite id="13_falcon" x="204" y="125"  w="32" h="32"/>
+
+		
+	</Textures>

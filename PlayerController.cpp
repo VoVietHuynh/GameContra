@@ -5,8 +5,6 @@ PlayerController::PlayerController()
 {
 	player = Player::GetInstance();
 	player->SetState(Object::Standing);
-	isAllowJump = false;
-	isFall = true;
 	isAttack = false;
 
 	_functionMap[Object::Standing] = &PlayerController::StandState;
@@ -56,7 +54,7 @@ void PlayerController::JumpState()
 {
 	player->State = Object::Jumping;
 	player->SetBound(20, 20);
-	player->SetVelocityY(player->GetVelocity().y-0.1);
+	player->SetVelocityY(player->GetVelocity().y + Gravity/25);
 }
 
 //Trạng thái chêt
@@ -100,7 +98,7 @@ void PlayerController::SwimState()
 void PlayerController::DivingState()
 {
 	player->State = Object::Diving;
-	player->SetBound(16, 13);
+	player->SetBound(25, 10);
 	if (key->GIsKeyUp(Dik_DOWN))
 	{
 		SwimState();
@@ -146,7 +144,7 @@ void PlayerController::Update(float gameTime, Keyboard* key)
 	this->key = key;
 	MoveX();
 	if (player->State != Object::Jumping) {
-		player->SetVelocityY(Gravity);
+		player->SetVelocityY(-1);
 	}
 
 	this->PlayControllerF();

@@ -33,7 +33,7 @@ Animation::DataAnimMap dataM()
 	Animation::DataAnimMap data;
 	//Small
 	data[Player::Blue + Object::Standing] = { 0, 0 };
-	data[Player::Blue + Object::Running] = { 1, 5, 5 };
+	data[Player::Blue + Object::Running] = { 1, 5};
 	data[Player::Blue + Object::Jumping] = { 6, 9};
 	data[Player::Blue + Object::Sitting] = { 10, 10 };
 	data[Player::Blue + Object::Dying] = { 11, 11 };
@@ -68,7 +68,6 @@ void Player::Init()
 void Player::BeforeUpdate(float gameTime, Keyboard* key)
 {
 	_playerCollision->isGround = false;
-	_playerCollision->isCollisionTop = false;
 
 	this->SetBound(Width, Height);
 	//Check handler controller

@@ -16,10 +16,7 @@ protected:
 	float Height;
 
 public:
-	RECT _rect;
-	float _left = 0;
-	float _right = 0;
-	bool isMoveTop = false;
+	RECT RectView;
 
 public:
 	Viewport();

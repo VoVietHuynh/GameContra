@@ -104,7 +104,7 @@ void Animation::SetPause(bool pause, int index)
 void Animation::Update(float gameTime)
 {
 	//Chuyển frame tiếp theo
-	if (TimeCurrent*100 >= delay )
+	if (TimeCurrent * 1000 >= delay )
 	{
 		TimeCurrent = 0;
 		Index++;

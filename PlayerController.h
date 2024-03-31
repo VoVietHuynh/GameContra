@@ -14,17 +14,8 @@ private:
 	FunctionMap _functionMap;
 
 public:
-	//Run
-	bool isBake, isCount, isSpeed;
-	float accDown;
-	int accCount = 0;
-	//Jump
-	bool isAllowJump, isFall, isFallDown, isSpeedJump, isShortJump, isFly;
-	float posYStartJump, velYStartFall, maxJump, fallAc, timeFlyDown;
 	//Attack
 	bool isAttack, isAllowAttack;
-	float timeAc;
-
 
 	Player* player;
 	Keyboard* key;

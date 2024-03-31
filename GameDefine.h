@@ -25,8 +25,8 @@ namespace Define
 	const char PlayerPNG[] = "./Resource Files/bill_animation.png";
 	const char PlayerXML[] = "./Resource Files/player_info.xml";
 		//Enemy
-	const char EnemyPNG[] = "./Resource Files/Soldier.png";
-	const char EnemyXML[] = "./Resource Files/enemy_info.xml";
+	const char EnemyPNG[] = "./Resource Files/enemies_animation.png";
+	const char EnemyXML[] = "./Resource Files/enemies_info.xml";
 		//Misc
 	const char MiscPNG[] = "./Resource Files/misc_png.png";
 	const char MiscXML[] = "./Resource Files/misc_info.xml";
@@ -42,9 +42,9 @@ namespace Define
 	const float timeEnd = 3;
 
 	//PlayerRun
-	const float RunSpeed = 1.0f;
-	const float Gravity = -2.0f;
+	const float RunSpeed = 100.0f;
+	const float Gravity = -200.0f;
 
 	//Enemy
-	const float EnemySpeed = 1.0f;
+	const float EnemySpeed = 100.0f;
 }

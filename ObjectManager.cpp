@@ -43,7 +43,7 @@ void ObjectManager::Update(float gameTime, Keyboard* key)
 	//
 	if (key->IsKeyDown(Dik_START))
 	{
-		float time = 500;
+		float time = std::numeric_limits<float>::infinity();
 		if (isPause)
 			StartPause(0);
 		else
@@ -57,11 +57,6 @@ void ObjectManager::Update(float gameTime, Keyboard* key)
 			pauseTime -= gameTime;
 		else
 			isPause = false;
-
-		//Animation all Object
-		for (size_t i = 0; i < map->ListObject.size(); i++)
-			map->ListObject.at(i)->UpdateAnimation(gameTime);
-
 		return;
 	}
 
@@ -79,19 +74,8 @@ void ObjectManager::Update(float gameTime, Keyboard* key)
 	for (size_t i = 0; i < map->ListObject.size(); i++)
 		map->ListObject.at(i)->Update(gameTime, key);
 
-	//Check Viewport
-	D3DXVECTOR2 posPlayer = Player::GetInstance()->GetPosition();
-	for (size_t i = 0; i < map->ListWallView.size(); i++)
-	{
-		if (Collision::isCollision(posPlayer.x, posPlayer.y, map->ListWallView[i]))
-		{
-			viewport -> _rect = map->ListWallView[i];
-			break;
-		}
-	}
 	//Update Viewport theo vị trí Player
-	viewport->isMoveTop = Player::GetInstance()->_playerController->isSpeed;
-	viewport->Update(gameTime, key, posPlayer);
+	viewport->Update(gameTime, key, Player::GetInstance()->GetPosition());
 }
 
 void ObjectManager::StartPause(float time)
@@ -120,12 +104,6 @@ void ObjectManager::Render()
 	{
 		map->ListObject.at(i)->Render(viewport);
 		DrawLine::GetInstance()->DrawRect(map->ListObject.at(i)->GetBound());
-	}
-
-	//Vẽ
-	for (size_t i = 0; i < map->ListWallView.size(); i++)
-	{
-		DrawLine::GetInstance()->DrawRect(map->ListWallView.at(i));
 	}
 
 	//GUI

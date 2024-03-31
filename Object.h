@@ -17,7 +17,6 @@ protected:
 	RECT bound;
 	int HP = 0, Damage = 0;
 	string name;
-	float timeCollisionMin;
 public:
 	D3DXVECTOR2 positionStart;
 	//Jump

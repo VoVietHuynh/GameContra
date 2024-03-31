@@ -69,9 +69,6 @@
     <ClCompile Include="Object.cpp">
       <Filter>Object</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Object\Player</Filter>
-    </ClCompile>
     <ClCompile Include="SceneManager.cpp">
       <Filter>Sences</Filter>
     </ClCompile>
@@ -119,6 +116,9 @@
       <Filter>Object\Wall</Filter>
     </ClCompile>
     <ClCompile Include="OEnemy.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
   </ItemGroup>

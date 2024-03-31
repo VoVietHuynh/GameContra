@@ -33,7 +33,6 @@ void PlayerCollision::OnCollision()
 
 	//Kiểm tra player rơi
 	isGround = isGround || _side.y == Collision::BOTTOM;
-	isCollisionTop = isCollisionTop || _side.y == Collision::TOP;
 }
 
 

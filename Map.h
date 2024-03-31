@@ -18,7 +18,6 @@ public:
 	InfoMap *info;
 	map<string, int> objectTag;
 	vector <Object*> ListObject;
-	vector <RECT> ListWallView;
 public:
 	Map();
 	~Map();

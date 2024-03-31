@@ -117,20 +117,26 @@ void Viewport::Update(float gameTime, Keyboard* key, D3DXVECTOR2 &posobject)
 	else if (posobject.x - positionWorld.x >= 144)
 		positionWorld.x = posobject.x - 144;
 
-	if (positionWorld.y - posobject.y <= 112 && isMoveTop)
+	if (positionWorld.y - posobject.y <= 112)
 		positionWorld.y = posobject.y + 112;
 	else if (positionWorld.y - posobject.y >= 144)
 		positionWorld.y = posobject.y + 144;
 
 	//rect
 	RECT boundView = GetBoundViewport();
-	if (boundView.left < _left)
-		positionWorld.x = _left;
-	else if (boundView.right > _right)
-		positionWorld.y = _right - Width;
+	if (boundView.left <= RectView.left)
+		positionWorld.x = RectView.left;
+	else if (boundView.right >= RectView.right)
+		positionWorld.x = RectView.right - Width;
 
-	if (boundView.top > _rect.top)
-		positionWorld.y = _rect.top;
-	else if (boundView.bottom < _rect.bottom)
-		positionWorld.y = _rect.bottom + Height;
+	if (boundView.top >= RectView.top)
+		positionWorld.y = RectView.top;
+	else if (boundView.bottom <= RectView.bottom)
+		positionWorld.y = RectView.bottom + Height;
+
+	//
+	if (positionWorld.x > RectView.left)
+	{
+		RectView.left = positionWorld.x;
+	}
 }

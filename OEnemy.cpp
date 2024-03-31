@@ -5,8 +5,8 @@ Animation* OEnemy::GetAnimationEnemy()
 {
 	//Tạo Animation
 	Animation::DataAnimMap data;
-	// Goomba
-	data[OEnemy::Soldier + Object::Running] = { 0 , 4};
+	// Soldier
+	data[OEnemy::Soldier + Object::Running] = { 0 , 6};
 	
 
 	Animation* _animEnemy = new Animation(EnemyXML, EnemyPNG);

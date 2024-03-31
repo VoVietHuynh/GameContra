@@ -199,9 +199,7 @@ void Object::BeforeUpdate(float gameTime, Keyboard* key)
 
 void Object::Update(float gameTime, Keyboard* key)
 {
-	velocity.y *= timeCollisionMin;
-	position += velocity * gameTime * 100;
-	timeCollisionMin = 1.0f;
+	position += velocity * gameTime;
 }
 
 void Object::UpdateAnimation(float gameTime)
@@ -213,7 +211,7 @@ void Object::OnCollision(Object *obj, float gameTime)
 	if (obj->State == Object::Dying || this->State == Object::Dying)
 		return;
 	D3DXVECTOR2 side;
-	D3DXVECTOR2 distance = velocity * gameTime * 100;
+	D3DXVECTOR2 distance = velocity * gameTime;
 	RECT board = GetBoard(distance);
 	//Nếu obj trong vùng di chuyển
 	if (Collision::isCollision(board, obj->GetBound()))
@@ -229,7 +227,7 @@ void Object::OnCollision(Object *obj, float gameTime)
 				if (obj->Tag == Object::Wall) //Nếu là tường đi xuyên
 				{
 					//Nếu là tường đi xuyên
-					if (dynamic_cast<OWall*>(obj)->_walltype == OWall::Wall && obj->_kind == 1)
+					if (dynamic_cast<OWall*>(obj)->_walltype == OWall::Wall && obj->_kind == 0)
 					{
 						//Đụng đáy thì đi lên tường
 						if (side.y == Collision::BOTTOM)
@@ -248,14 +246,10 @@ void Object::OnCollision(Object *obj, float gameTime)
 					position.x += distance.x * Time;
 					velocity.x = 0;
 				}
-				else if (side.y == Collision::BOTTOM)
+				else if (side.y != Collision::NONE)
 				{
 					position.y += distance.y * Time;
 					velocity.y = 0;
-				}
-				else if (side.y != Collision::NONE)
-				{
-					timeCollisionMin = Time < timeCollisionMin ? Time : timeCollisionMin;
 				}
 			}
 		}
