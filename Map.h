@@ -5,6 +5,7 @@
 #include "InfoMap.h"
 #include "Water.h"
 #include "OEnemy.h"
+#include "BinaryTree.h"
 
 using namespace Define;
 
@@ -18,6 +19,8 @@ public:
 	InfoMap *info;
 	map<string, int> objectTag;
 	vector <Object*> ListObject;
+
+	BinaryTree* Tree;
 public:
 	Map();
 	~Map();

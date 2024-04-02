@@ -121,6 +121,7 @@
     <ClCompile Include="Player.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="BinaryTree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TinyXML\tinystr.h">
@@ -208,5 +209,6 @@
     <ClInclude Include="OEnemy.h">
       <Filter>Object\Enemy</Filter>
     </ClInclude>
+    <ClInclude Include="BinaryTree.h" />
   </ItemGroup>
 </Project>

@@ -231,7 +231,7 @@ void Object::OnCollision(Object *obj, float gameTime)
 					{
 						//Đụng đáy thì đi lên tường
 						if (side.y == Collision::BOTTOM)
-							side = D3DXVECTOR2(Collision::NONE, side.y);
+							side = D3DXVECTOR2(Collision::NONE, Collision::BOTTOM);
 						else
 						{
 							side = D3DXVECTOR2(Collision::NONE, Collision::NONE);

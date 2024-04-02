@@ -18,6 +18,7 @@ protected:
 	Map* map;
 
 	float pauseTime;
+	vector <Object*> mCurrList;
 public:
 	bool isPause;
 

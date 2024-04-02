@@ -67,6 +67,7 @@ void PlayerController::DeadState()
 //Trạng thái ngồi
 void PlayerController::SitState()
 {
+	player->isFall = false;
 	player->State = Object::Sitting;
 	player->SetBound(32, 16);
 	if (key->GIsKeyUp(Dik_DOWN))
@@ -75,6 +76,11 @@ void PlayerController::SitState()
 		return;
 	}
 
+	if (key->IsKeyDown(Dik_JUMP))
+	{
+		player->isFall = true;
+		return;
+	}
 }
 
 void PlayerController::SwimState()

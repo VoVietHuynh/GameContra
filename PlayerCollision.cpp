@@ -48,11 +48,12 @@ void PlayerCollision::CheckCollisionWall(Object* _wall)
 		{
 			player->State = Object::Standing;
 		}
-		//if (_side.y == Collision::BOTTOM && player->State == Object::Sitting)
-		//{
-		//	player->State = Object::Jumping;
-		//	player->SetPositionY(player->GetPosition().y - 2);
-		//}
+		if (wall->_kind == 0 && player->isFall &&
+			_side.y == Collision::BOTTOM && player->State == Object::Sitting)
+		{
+			player->State = Object::Jumping;
+			player->SetPositionY(player->GetPosition().y - 2);
+		}
 		break;
 	case OWall::Water:
 		if (_side.y == Collision::BOTTOM && player->State == Object::Jumping)
