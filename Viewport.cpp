@@ -72,8 +72,8 @@ D3DXVECTOR2 Viewport::GetPositionViewport(D3DXVECTOR2 Position)
 	//đổi ma trận chuẩn bị nhân lấy tọa độ mới
 	D3DXMatrixIdentity(&mt);
 	mt._22 = -1.0f;
-	mt._41 = -positionWorld.x;
-	mt._42 = positionWorld.y;
+	mt._41 = -(int)positionWorld.x;
+	mt._42 = (int)positionWorld.y;
 
 	D3DXVec3Transform(&posViewport, position, &mt);
 

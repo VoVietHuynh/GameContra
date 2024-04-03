@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <vector>
 #include "Object.h"
 
@@ -19,7 +19,7 @@ public:
 	void insertObject(Object* object);
 	void getObjectsCollideAble(std::vector<Object*>& ObjectOut, RECT boundView);
 
-	bool isVertical = false;
+	bool isVertical = false; 
 	RECT Bound;
 	std::vector<Object*> mListObject; //danh sach cac phan tu co trong vung va cham (Bound)
 	BinaryTree* Left;

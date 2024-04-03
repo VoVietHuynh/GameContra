@@ -60,10 +60,6 @@ Map::~Map()
 	}
 }
 
-void Map::Update(float gameTime)
-{
-
-}
 
 Object* Map::CreateObject(MapObject* _mapobject)
 {

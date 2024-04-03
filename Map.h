@@ -27,7 +27,6 @@ public:
 
 	Object* CreateObject(MapObject* _mapobject);
 
-	void Update(float gameTime);
 	void Render(Viewport * view);
 };
 

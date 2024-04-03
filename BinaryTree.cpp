@@ -47,6 +47,10 @@ void BinaryTree::split()
 {
 	//chia 2 màn hình
 	RECT bound;
+	
+
+	
+
 	if (isVertical == true)
 	{
 		//Map dọc
@@ -173,8 +177,12 @@ void BinaryTree::LogAllObject(int level)
 
 	for (auto object : mListObject)
 	{
-		OutputDebugString("   "); LogSpace(0, object->GetName()); OutputDebugString("_");
-		LogSpace(0, object->positionStart.x); OutputDebugString("_"); LogSpace(0, object->positionStart.y);
+		OutputDebugString("   "); 
+		LogSpace(0, object->GetName()); 
+		OutputDebugString("_");
+		LogSpace(0, object->positionStart.x); 
+		OutputDebugString("_"); 
+		LogSpace(0, object->positionStart.y);
 	}
 
 	if (Left)
