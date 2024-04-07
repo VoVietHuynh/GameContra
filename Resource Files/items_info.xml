@@ -14,6 +14,10 @@
 		<Sprite id="11_falcon" x="136" y="125"  w="32" h="32"/>
 		<Sprite id="12_falcon" x="170" y="125"  w="32" h="32"/>
 		<Sprite id="13_falcon" x="204" y="125"  w="32" h="32"/>
+		<Sprite id="14_normal_bullet" x="50" y="102"  w="8" h="8"/>
+		<Sprite id="15_normal_bullet_die" x="11" y="100"  w="10" h="10"/>
+		<Sprite id="16_normal_bullet_die" x="23" y="96"  w="14" h="14"/>
+
 
 		
 	</Textures>

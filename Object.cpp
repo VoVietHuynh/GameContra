@@ -18,11 +18,11 @@ void Object::Init(D3DXVECTOR2 pos, int _type, int kind)
 
 bool Object::GetFlipFlag()
 {
-	return FlipFlag;
+	return isFlip;
 }
 void Object::SetFlipFlag(bool flag)
 {
-	FlipFlag = flag;
+	isFlip = flag;
 }
 //Khung va chạm
 RECT Object::GetBound()

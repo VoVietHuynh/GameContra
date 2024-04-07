@@ -28,6 +28,9 @@
     <Filter Include="Object\Enemy">
       <UniqueIdentifier>{46e3e84f-f410-4f84-a244-20d3f7fbdf7c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Bullet">
+      <UniqueIdentifier>{bd9caf81-5c2d-4251-abcd-9a7fd486f842}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TinyXML\tinystr.cpp">
@@ -119,9 +122,14 @@
       <Filter>Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Object\Enemy</Filter>
+      <Filter>Object\Player</Filter>
     </ClCompile>
-    <ClCompile Include="BinaryTree.cpp" />
+    <ClCompile Include="OBullet.cpp">
+      <Filter>Object\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTree.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TinyXML\tinystr.h">
@@ -200,15 +208,20 @@
     <ClInclude Include="MapObjectGroup.h">
       <Filter>Map</Filter>
     </ClInclude>
-    <ClInclude Include="debug.h">
-      <Filter>Global</Filter>
-    </ClInclude>
     <ClInclude Include="Water.h">
       <Filter>Object\Wall</Filter>
     </ClInclude>
     <ClInclude Include="OEnemy.h">
       <Filter>Object\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="debug.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="OBullet.h">
+      <Filter>Object\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTree.h">
+      <Filter>Map</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

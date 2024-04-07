@@ -142,6 +142,7 @@
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MapObject.cpp" />
     <ClCompile Include="MapObjectGroup.cpp" />
+    <ClCompile Include="OBullet.cpp" />
     <ClCompile Include="OEnemy.cpp" />
     <ClCompile Include="PlayerCollision.cpp" />
     <ClCompile Include="PlayerController.cpp" />
@@ -177,6 +178,7 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapObject.h" />
     <ClInclude Include="MapObjectGroup.h" />
+    <ClInclude Include="OBullet.h" />
     <ClInclude Include="OEnemy.h" />
     <ClInclude Include="PlayerCollision.h" />
     <ClInclude Include="PlayerController.h" />

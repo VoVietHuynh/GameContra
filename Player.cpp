@@ -3,6 +3,7 @@
 #include <math.h>
 #include "GUI.h"
 #include "ObjectManager.h"
+#include "Obullet.h"
 #pragma warning(disable : 4996)
 
 Player* Player::_player = nullptr;
@@ -33,12 +34,15 @@ Animation::DataAnimMap dataM()
 	Animation::DataAnimMap data;
 	//Small
 	data[Player::Blue + Object::Standing] = { 0, 0 };
-	data[Player::Blue + Object::Running] = { 1, 5};
-	data[Player::Blue + Object::Jumping] = { 6, 9};
-	data[Player::Blue + Object::Sitting] = { 10, 10 };
-	data[Player::Blue + Object::Dying] = { 11, 11 };
-	data[Player::Blue + Object::Diving] = { 12, 13 };
-	data[Player::Blue + Object::Swimming] = { 15, 15 };
+	data[Player::Blue + Object::Standing + 1] = { 48, 48 };
+	data[Player::Blue + Object::Running] = { 1, 6 };
+	data[Player::Blue + Object::Jumping] = { 7, 10 };
+	data[Player::Blue + Object::Sitting] = { 11, 11 };
+	data[Player::Blue + Object::Sitting + 1] = { 12, 12 };
+	data[Player::Blue + Object::Dying] = { 44, 47 };
+	data[Player::Blue + Object::Diving] = { 36, 37 };
+	data[Player::Blue + Object::Swimming] = { 34, 35, 150 };
+	data[Player::Blue + Object::Swimming + 1] = { 38, 39, 150 };
 
 
 	return data;
@@ -62,7 +66,7 @@ void Player::Init()
 	Animation::DataAnimMap data = dataM();
 	_anim = new Animation(PlayerXML, PlayerPNG);
 	_anim->SetDataAnimation(data);
-	SetBound(20, 35);
+	SetBound(40, 40);
 }
 
 void Player::BeforeUpdate(float gameTime, Keyboard* key)
@@ -102,13 +106,21 @@ void Player::Update(float gameTime, Keyboard* key)
 	UpdateAnimation(gameTime);
 
 	Object::Update(gameTime, key);
+
+	for (size_t i = 0; i < ListBullet.size(); i++)
+	{
+		if (abs(positionStart.x - ListBullet.at(i)->GetPosition().x) > GameWidth/2 || ListBullet.at(i)->GetState() == Object::Dying)
+		{
+			ListBullet.erase(std::next(ListBullet.begin(), i));
+		}
+	}
 }
 
 void Player::UpdateAnimation(float gameTime)
 {
-	_anim->NewAnimationByIndex(_playerType + this->State);
+	_anim->NewAnimationByIndex(_playerType + this->State + _playerController->isAttack);
 	_anim->SetPosition(D3DXVECTOR2(position.x, position.y + Height / 2));
-	_anim->SetFlipFlag(FlipFlag);
+	_anim->SetFlipFlag(isFlip);
 	_anim->Update(gameTime);
 }
 

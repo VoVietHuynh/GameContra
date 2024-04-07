@@ -2,9 +2,9 @@
 #include "Object.h"
 #include "PlayerCollision.h"
 #include "PlayerController.h"
-
 using namespace Define;
 
+class OBullet;
 class Player : public Object
 {
 private:
@@ -21,6 +21,9 @@ public:
 	int _life;
 	bool isImmortal = false;
 	float immortalTime = 0;
+
+	vector <OBullet*> ListBullet;
+	vector <Object*> ItemBullet;
 public:
 	Player(); 
 	~Player();

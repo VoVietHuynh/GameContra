@@ -11,7 +11,7 @@ class Viewport
 {
 protected:
 	//Tọa độ Viewport là hệ tọa độ Đề các left-bot
-	D3DXVECTOR2 positionWorld;
+	D3DXVECTOR2 position_of_world;
 	float Width;
 	float Height;
 

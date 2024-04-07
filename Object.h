@@ -9,7 +9,7 @@ class Object
 protected:
 	Animation* _anim;
 	float Width, Height;
-	bool FlipFlag, AllowDraw, lock;
+	bool AllowDraw, lock;
 	D3DXVECTOR2 position; //vị trí vẽ
 	D3DXVECTOR2 velocity;//Vector vận tốc
 	D3DXVECTOR2 transform;
@@ -20,9 +20,10 @@ protected:
 public:
 	D3DXVECTOR2 positionStart;
 	//Jump
+	bool isFlip;
 	bool isAllowJump = true, isFall = false;
 	float posYStartJump, velYStartFall, gravity, speedJump, maxJump;
-
+	float timeDead;
 public:
 	int id;
 	int _kind = 0;
@@ -31,7 +32,8 @@ public:
 	{
 		Wall,
 		Player,
-		Enemy
+		Enemy,
+		Bullet
 	}Tag;
 
 	enum Stateobject

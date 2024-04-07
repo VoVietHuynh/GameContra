@@ -8,8 +8,8 @@ Viewport::Viewport()
 
 Viewport::Viewport(float x, float y)
 {
-	this->positionWorld.x =x;
-	this->positionWorld.y =y;
+	this->position_of_world.x =x;
+	this->position_of_world.y =y;
 	//Mặc định là kích thước game
 	this->Width = GameWidth;
 	this->Height = GameHeight;
@@ -17,8 +17,8 @@ Viewport::Viewport(float x, float y)
 
 Viewport::Viewport(float x, float y, float width, float height)
 {
-	this->positionWorld.x = x;
-	this->positionWorld.y = y;
+	this->position_of_world.x = x;
+	this->position_of_world.y = y;
 	this->Width = width;
 	this->Height = height;
 }
@@ -30,19 +30,19 @@ Viewport::~Viewport()
 //Get set vị trí Viewport
 D3DXVECTOR2 Viewport::GetPosition()
 {
-	return positionWorld;
+	return position_of_world;
 }
 void Viewport::SetPosition(D3DXVECTOR2 Position)
 {
-	positionWorld = Position;
+	position_of_world = Position;
 }
 void Viewport::SetPositionX(float x)
 {
-	positionWorld.x = x;	
+	position_of_world.x = x;	
 }
 void Viewport::SetPositionY(float y)
 {
-	positionWorld.y = y;
+	position_of_world.y = y;
 }
 
 //Lấy chiều dài rộng của Viewport
@@ -58,7 +58,7 @@ float Viewport::GetHeight()
 //Lấy vị trí của ViewPort từ vị trị object cần vẽ theo hệ trục left-top
 D3DXVECTOR2 Viewport::GetPositionViewport_Left_Top(D3DXVECTOR2 Position)
 {
-	return Position-positionWorld;
+	return Position-position_of_world;
 }
 
 //Lấy vị trí của ViewPort từ vị trị object cần vẽ theo hệ đề các
@@ -72,8 +72,8 @@ D3DXVECTOR2 Viewport::GetPositionViewport(D3DXVECTOR2 Position)
 	//đổi ma trận chuẩn bị nhân lấy tọa độ mới
 	D3DXMatrixIdentity(&mt);
 	mt._22 = -1.0f;
-	mt._41 = -(int)positionWorld.x;
-	mt._42 = (int)positionWorld.y;
+	mt._41 = -(int)position_of_world.x;
+	mt._42 = (int)position_of_world.y;
 
 	D3DXVec3Transform(&posViewport, position, &mt);
 
@@ -83,13 +83,13 @@ D3DXVECTOR2 Viewport::GetPositionViewport(D3DXVECTOR2 Position)
 //Kiểm tra 1 rect có ở trong màn hình không
 bool Viewport::isContains(RECT rect)
 {
-	if (rect.right < positionWorld.x)
+	if (rect.right < position_of_world.x)
 		return false;
-	if (rect.bottom > positionWorld.y)
+	if (rect.bottom > position_of_world.y)
 		return false;
-	if (rect.left > positionWorld.x + Width)
+	if (rect.left > position_of_world.x + Width)
 		return false;
-	if (rect.top < positionWorld.y - Height)
+	if (rect.top < position_of_world.y - Height)
 		return false;
 
 	return true;
@@ -100,8 +100,8 @@ RECT Viewport::GetBoundViewport()
 {
 	RECT rect;
 
-	rect.left = positionWorld.x;
-	rect.top = positionWorld.y;
+	rect.left = position_of_world.x;
+	rect.top = position_of_world.y;
 	rect.bottom = rect.top - Height;
 	rect.right = rect.left + Width;
 
@@ -112,31 +112,31 @@ RECT Viewport::GetBoundViewport()
 void Viewport::Update(float gameTime, Keyboard* key, D3DXVECTOR2 &posobject)
 {
 	//posPlayer
-	if (posobject.x - positionWorld.x <= 112)
-		positionWorld.x = posobject.x - 112;
-	else if (posobject.x - positionWorld.x >= 144)
-		positionWorld.x = posobject.x - 144;
+	if (posobject.x - position_of_world.x <= 112)
+		position_of_world.x = posobject.x - 112;
+	else if (posobject.x - position_of_world.x >= 144)
+		position_of_world.x = posobject.x - 144;
 
-	if (positionWorld.y - posobject.y <= 112)
-		positionWorld.y = posobject.y + 112;
-	else if (positionWorld.y - posobject.y >= 144)
-		positionWorld.y = posobject.y + 144;
+	if (position_of_world.y - posobject.y <= 112)
+		position_of_world.y = posobject.y + 112;
+	else if (position_of_world.y - posobject.y >= 144)
+		position_of_world.y = posobject.y + 144;
 
 	//rect
 	RECT boundView = GetBoundViewport();
 	if (boundView.left <= RectView.left)
-		positionWorld.x = RectView.left;
+		position_of_world.x = RectView.left;
 	else if (boundView.right >= RectView.right)
-		positionWorld.x = RectView.right - Width;
+		position_of_world.x = RectView.right - Width;
 
 	if (boundView.top >= RectView.top)
-		positionWorld.y = RectView.top;
+		position_of_world.y = RectView.top;
 	else if (boundView.bottom <= RectView.bottom)
-		positionWorld.y = RectView.bottom + Height;
+		position_of_world.y = RectView.bottom + Height;
 
 	//
-	if (positionWorld.x > RectView.left)
-	{
-		RectView.left = positionWorld.x;
-	}
+	//if (position_of_world.x > RectView.left)
+	//{
+	//	RectView.left = position_of_world.x;
+	//}
 }

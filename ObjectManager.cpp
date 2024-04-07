@@ -60,12 +60,14 @@ void ObjectManager::Update(float gameTime, Keyboard* key)
 		return;
 	}
 
-	map->ListObject.clear();
-	map->Tree->getObjectsCollideAble(map->ListObject, viewport->GetBoundViewport());
+	//map->ListObject.clear();
+	//map->Tree->getObjectsCollideAble(map->ListObject, viewport->GetBoundViewport());
 
 	//BeforeUpdate all Object
 	for (size_t i = 0; i < map->ListObject.size(); i++)
+	{
 		map->ListObject.at(i)->BeforeUpdate(gameTime, key);
+	}
 
 	//Check Collision
 	for (size_t i = 0; i < map->ListObject.size(); i++)

@@ -7,7 +7,7 @@ Animation* OEnemy::GetAnimationEnemy()
 	Animation::DataAnimMap data;
 	// Soldier
 	data[OEnemy::Soldier + Object::Running] = { 0 , 6};
-	
+	data[OEnemy::Soldier + Object::Dying] = { 7 , 8 };
 
 	Animation* _animEnemy = new Animation(EnemyXML, EnemyPNG);
 	_animEnemy->SetDataAnimation(data);
@@ -34,7 +34,7 @@ void OEnemy::Init(D3DXVECTOR2 pos, int _type, int kind)
 	position = pos;
 	velocity = D3DXVECTOR2(-EnemySpeed, Gravity);
 	SetState(Object::Running);
-	this->SetBound(15, 15);
+	this->SetBound(15, 32);
 	HP = 1;
 	type = _type;
 }
@@ -66,17 +66,24 @@ D3DXVECTOR2 OEnemy::OnCollision(Object* obj, D3DXVECTOR2 side)
 
 void OEnemy::BeforeUpdate(float gameTime, Keyboard* key)
 {
-	this->SetBound(15, 15);
+	this->SetBound(15, 32);
 	this->Controller();
 }
 
 void OEnemy::Update(float gameTime, Keyboard* key)
 {
+	if (HP <= 0)
+	{
+		State = Object::Dying;
+	}
 	//Update Animation
 	if (State == Object::Dying)
 	{
 		this->SetBound(0, 0);
 		this->SetVelocity(0, 0);
+		timeDead += gameTime;
+		if (timeDead > 0.2)
+			AllowDraw = false;
 	}
 
 	UpdateAnimation(gameTime);

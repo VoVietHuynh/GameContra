@@ -27,9 +27,9 @@ namespace Define
 		//Enemy
 	const char EnemyPNG[] = "./Resource Files/enemies_animation.png";
 	const char EnemyXML[] = "./Resource Files/enemies_info.xml";
-		//Misc
-	const char MiscPNG[] = "./Resource Files/misc_png.png";
-	const char MiscXML[] = "./Resource Files/misc_info.xml";
+		//Item
+	const char ItemPNG[] = "./Resource Files/items_animation.png";
+	const char ItemXML[] = "./Resource Files/items_info.xml";
 
 		//Map
 	const char TileSetPNG[] = "./Resource Files/TitleSetMap1.png";
@@ -47,4 +47,7 @@ namespace Define
 
 	//Enemy
 	const float EnemySpeed = 100.0f;
+
+	//Bullet
+	const float BulletSpeed = 200.0f;
 }

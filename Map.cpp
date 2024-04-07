@@ -34,8 +34,6 @@ Map::Map()
 		for (int j = 0; j < info->ObjectGroups.at(i)->NumOnjects; j++)
 		{
 			MapObject* mapObject = info->ObjectGroups.at(i)->Objects.at(j);
-			CreateObject(mapObject);
-
 			Object* obj = CreateObject(mapObject);
 			//Thêm object vào cây nhị phân
 			this->Tree->insertObject(obj);
