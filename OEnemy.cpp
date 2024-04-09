@@ -8,6 +8,7 @@ Animation* OEnemy::GetAnimationEnemy()
 	// Soldier
 	data[OEnemy::Soldier + Object::Running] = { 0 , 6};
 	data[OEnemy::Soldier + Object::Dying] = { 7 , 8 };
+	data[OEnemy::Rifleman + Object::Standing] = { 9 };
 
 	Animation* _animEnemy = new Animation(EnemyXML, EnemyPNG);
 	_animEnemy->SetDataAnimation(data);
@@ -37,6 +38,13 @@ void OEnemy::Init(D3DXVECTOR2 pos, int _type, int kind)
 	this->SetBound(15, 32);
 	HP = 1;
 	type = _type;
+
+	if (_kind == Enemytype::Rifleman) {
+		velocity = D3DXVECTOR2(0, Gravity);
+		_kind = 0;
+		_enemyType = Enemytype::Rifleman;
+		SetState(Object::Standing);
+	}
 }
 
 void OEnemy::Controller()
