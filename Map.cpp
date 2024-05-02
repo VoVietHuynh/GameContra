@@ -28,6 +28,7 @@ Map::Map()
 	objectTag["Wall"] = OWall::Wall;
 	objectTag["Water"] = OWall::Water;
 	objectTag["Soldier"] = OEnemy::Soldier;
+	objectTag["rifleman"] = OEnemy::rifleman;
 
 	for (int i = 0; i < info->numObjectGroups; i++)
 	{
@@ -36,7 +37,7 @@ Map::Map()
 			MapObject* mapObject = info->ObjectGroups.at(i)->Objects.at(j);
 			Object* obj = CreateObject(mapObject);
 			//Thêm object vào cây nhị phân
-			this->Tree->insertObject(obj);
+			//this->Tree->insertObject(obj);
 		}
 	}
 
@@ -90,6 +91,9 @@ Object* Map::CreateObject(MapObject* _mapobject)
 		switch (objectTag[_mapobject->name])
 		{
 		case OEnemy::Soldier:
+			obj = new OEnemy();
+			break;
+		case OEnemy::rifleman:
 			obj = new OEnemy();
 			break;
 		default:

@@ -10,6 +10,7 @@ public:
 	enum Enemytype
 	{
 		Soldier = 100,
+		rifleman =  200,
 	} _enemyType = Enemytype::Soldier;
 
 	OEnemy();
