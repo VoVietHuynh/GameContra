@@ -49,6 +49,7 @@ void  InfoSprite::ReadXML(const char* path)
 		n++;
 	}
 	int a = 1;
+	//oke
 }
 
 float InfoSprite::GetWidth()
