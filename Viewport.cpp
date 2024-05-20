@@ -108,6 +108,20 @@ RECT Viewport::GetBoundViewport()
 	return rect;
 }
 
+
+//Kích thước RECT màn hình tính trong World
+RECT Viewport::GetBoundViewport1()
+{
+	RECT rect;
+
+	rect.left = position_of_world.x - 30;
+	rect.top = position_of_world.y + 30;
+	rect.bottom = rect.top - Height - 30;
+	rect.right = rect.left + Width + 30;
+
+	return rect;
+}
+
 //Update theo 1 đối tượng
 void Viewport::Update(float gameTime, Keyboard* key, D3DXVECTOR2 &posobject)
 {
@@ -134,9 +148,9 @@ void Viewport::Update(float gameTime, Keyboard* key, D3DXVECTOR2 &posobject)
 	else if (boundView.bottom <= RectView.bottom)
 		position_of_world.y = RectView.bottom + Height;
 
-	//
-	//if (position_of_world.x > RectView.left)
-	//{
-	//	RectView.left = position_of_world.x;
-	//}
+	
+	if (position_of_world.x > RectView.left)
+	{
+		RectView.left = position_of_world.x;
+	}
 }

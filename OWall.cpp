@@ -48,15 +48,24 @@ void OWall::UpdateAnimation(float gameTime)
 {
 }
 
-void OWall::SetBound(float width, float height)
+RECT OWall::GetBound(float width, float height)
 {
-	InfoSprite::Infoframe info = _anim->GetCurrentFrameInfo();
-	Width = info.w;
-	Height = info.h;
-	bound.left = position.x - Width / 2;
-	bound.right = bound.left + Width;
-	bound.top = position.y + Height / 2;
-	bound.bottom = bound.top - Height;
+	Width = width;
+	Height = height;
+
+	float w = width >= 0 ? width : Width;
+	float h = height >= 0 ? height : Height;
+	bound.left = position.x - w / 2;
+	bound.right = bound.left + w;
+	bound.top = position.y;
+	bound.bottom = position.y - h;
+
+	return bound;
+}
+
+RECT OWall::GetBound()
+{
+	return bound;
 }
 
 void OWall::Render(Viewport* viewport)

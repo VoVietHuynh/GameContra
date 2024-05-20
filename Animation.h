@@ -41,4 +41,5 @@ public:
 	void SetPause(bool pause);
 	void SetPause(bool, int);
 	void Update(float gameTime);
+	D3DXVECTOR2 GunPos(int index);
 };

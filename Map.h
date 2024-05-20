@@ -3,15 +3,19 @@
 #include "TileSet.h"
 #include "GameDefine.h"
 #include "InfoMap.h"
-#include "Water.h"
-#include "OEnemy.h"
+#include "Cannon.h"
+#include "Tank.h"
+#include "TankFalcon.h"
 #include "BinaryTree.h"
+#include "Bridge.h"
+
 
 using namespace Define;
 
 class Map
 {
 public:
+	GSound* gSound;
 	//tính theo tile
 	int WidthMap, HeightMap;
 	TileSet* tileset;

@@ -36,7 +36,7 @@ void  InfoSprite::ReadXML(const char* path)
 	for (indexml = sprite->FirstChildElement(); indexml != NULL; indexml = indexml->NextSiblingElement())
 	{
 		//indexml->QueryIntAttribute("n", &n);
-		float x, y, w, h, frameTime;
+		float x, y, w, h, frameTime, sx, sy;
 		std::string stateName;
 		indexml->QueryFloatAttribute("x",  &x);
 		indexml->QueryFloatAttribute("y", &y);
@@ -44,8 +44,9 @@ void  InfoSprite::ReadXML(const char* path)
 		indexml->QueryFloatAttribute("h", &h);
 		//indexml->QueryFloatAttribute("frameTime", &frameTime);
 		stateName = indexml->Attribute("id");
-
-		this->_infoFrame[n] = { x, y, w, h, 100, stateName };
+		indexml->QueryFloatAttribute("sx", &sx);
+		indexml->QueryFloatAttribute("sy", &sy);
+		this->_infoFrame[n] = { x, y, w, h, 100, stateName, sx, sy };
 		n++;
 	}
 	int a = 1;

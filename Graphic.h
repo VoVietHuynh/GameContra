@@ -2,6 +2,7 @@
 #include <d3d9.h>
 #include <d3dx9.h>
 #include <string>
+#include "Sound.h"
 using namespace std;
 
 class Graphic
@@ -30,6 +31,7 @@ private:
 	int Height;
 
 public:
+	Sound* sound;
 	//Contructor
 	Graphic();
 	void Init(HWND hwnd, int width, int height);

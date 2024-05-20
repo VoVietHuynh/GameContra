@@ -1,6 +1,6 @@
 ﻿#include "Object.h"
-#include "OWall.h"
 #include "Player.h"
+#include "ObjectManager.h"
 
 Object::Object()
 {
@@ -281,13 +281,17 @@ Object::tag Object::GetTag(string name)
 	{
 		return tag::Player;
 	}
-	if (name == "Wall" || name == "Water")
+	if (name == "Wall" || name == "Water" || name == "Bridge")
 	{
 		return tag::Wall;
 	}
-	if (name == "Soldier")
+	if (name == "Soldier" || name == "RifleMan" || name == "Tank" || name == "Cannon")
 	{
 		return tag::Enemy;
+	}
+	if (name == "Falcon" || name == "TankFalcon")
+	{
+		return tag::Item;
 	}
 	return tag::Wall;
 }
@@ -305,4 +309,34 @@ Object::Stateobject Object::GetState()
 void Object::SetState(Stateobject _stateObject)
 {
 	State = _stateObject;
+}
+
+//Trạng thái nhảy
+void Object::JumpState()
+{
+	if (isAllowJump)
+	{
+		posYStartJump = position.y;
+		isFall = false;
+	}
+	isAllowJump = false;
+
+	//Fall
+	if (!isFall && (position.y - posYStartJump >= maxJump))
+	{
+		isFall = true;
+		velocity.y = speedJump;
+	}
+
+	if (isFall)
+	{
+		float fallAc = ObjectManager::GetInstance()->IsFixTime ? Gravity/8 : 0;
+		velocity.y += fallAc; //trừ vận tốc sẽ nhảy nhẹ 1 đoạn
+		if (velocity.y < Gravity)
+			velocity.y = Gravity;
+		return;
+	}
+	//JumpUP
+	SetVelocityY(speedJump);
+
 }

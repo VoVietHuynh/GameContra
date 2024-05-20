@@ -14,6 +14,8 @@ public:
 		float h;
 		float frameTime;
 		std::string stateName;
+		float sx;
+		float sy;
 	};
 protected:
 	float Width, Height ,frameW , frameH;

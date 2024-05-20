@@ -10,6 +10,7 @@ class DrawLine
 
 private:
 	static DrawLine* _drawLine;
+	D3DCOLOR _color;
 public:
 	DrawLine();
 	~DrawLine();
@@ -17,5 +18,7 @@ public:
 
 	void Draw(D3DXVECTOR2 lines[], int count);
 	void DrawRect(RECT rect);
+	void SetColor(D3DCOLOR Color);
+	void SetColor(int r, int g, int b);
 };
 

@@ -6,7 +6,7 @@ using namespace std;
 class MapObject
 {
 public:
-	string name;
+	string name, nameType;
 	float x, y, width, height;
 	int id, kind = 0;
 	MapObject(TiXmlElement *node,string name);

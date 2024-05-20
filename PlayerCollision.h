@@ -21,6 +21,8 @@ public:
 	~PlayerCollision();
 
 	void CheckCollisionWall(Object* block = nullptr);
+	void CheckCollisionItem(Object* block = nullptr);
+	
 	void OnCollision();
 	void PlayCollisionF();
 

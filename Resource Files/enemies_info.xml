@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<Textures textureId="enemy_animation">
-    		<Sprite id="0_soldier_run" x="465" y="327"  w="16" h="32"/>
-		<Sprite id="1_soldier_run" x="484" y="327"  w="16" h="32"/>
-		<Sprite id="2_soldier_run" x="502" y="327"  w="16" h="32"/>
-		<Sprite id="3_soldier_run" x="519" y="327"  w="16" h="32"/>
-		<Sprite id="4_soldier_run" x="537" y="327"  w="16" h="32"/>
-		<Sprite id="5_soldier_run" x="555" y="327"  w="16" h="32"/>
-		<Sprite id="6_soldier_run_bend" x="573" y="327"  w="16" h="32"/>
-		<Sprite id="7_soldier_attack_stand_1" x="591" y="327"  w="24" h="32"/>
-		<Sprite id="8_soldier_attack_stand_2" x="617" y="327"  w="24" h="32"/>
-		<Sprite id="9_soldier_attack_lie" x="643" y="327"  w="32" h="32"/>
+    		<Sprite id="0_soldier_run" x="464" y="326"  w="17" h="33"/>
+		<Sprite id="1_soldier_run" x="483" y="326"  w="17" h="33"/>
+		<Sprite id="2_soldier_run" x="501" y="326"  w="17" h="33"/>
+		<Sprite id="3_soldier_run" x="518" y="326"  w="17" h="33"/>
+		<Sprite id="4_soldier_run" x="536" y="326"  w="17" h="33"/>
+		<Sprite id="5_soldier_run" x="554" y="326"  w="17" h="33"/>
+		<Sprite id="6_soldier_run_bend" x="572" y="326"  w="17" h="33"/>
+		<Sprite id="7_soldier_attack_stand_1" x="590" y="323"  w="25" h="36"/>
+		<Sprite id="8_soldier_attack_stand_2" x="616" y="323"  w="25" h="36"/>
+		<Sprite id="9_soldier_attack_lie" x="642" y="323"  w="33" h="36"/>
 		<Sprite id="10_soldier_No_attack" x="677" y="327"  w="16" h="32"/>
 		<Sprite id="11_rifleman_stand_1" x="460" y="277"  w="24" h="39"/>
 		<Sprite id="12_rifleman_stand_2" x="486" y="277"  w="24" h="39"/>
-		<Sprite id="13_rifleman_attack_cross_up_1" x="512" y="277"  w="24" h="39"/>
-		<Sprite id="14_rifleman_attack_cross_up_2" x="538" y="277"  w="24" h="39"/>
-		<Sprite id="15_rifleman_attack_cross_down" x="564" y="277"  w="24" h="39"/>
+		<Sprite id="13_rifleman_attack_cross_up_1" x="510" y="277"  w="24" h="39" sx="14"  sy="40"/>
+		<Sprite id="14_rifleman_attack_cross_up_2" x="535" y="277"  w="24" h="39"/>
+		<Sprite id="15_rifleman_attack_cross_down" x="564" y="277"  w="24" h="39" sx="18"  sy="40"/>
 		<Sprite id="16_rifleman_hide" x="590" y="277"  w="24" h="39"/>
 		<Sprite id="17_rifleman_appear_1" x="616" y="277"  w="24" h="39"/>
-		<Sprite id="18_rifleman_appear_2" x="642" y="277"  w="24" h="39"/>
+		<Sprite id="18_rifleman_appear_2" x="642" y="277"  w="24" h="39" />
 		<Sprite id="19_ScubaSoldier_" x="572" y="189"  w="16" h="32"/>
 		<Sprite id="20_ScubaSoldier_attack" x="590" y="189"  w="16" h="32"/>
 		<Sprite id="21_tank_left_đậm" x="129" y="260"  w="32" h="32"/>
@@ -34,63 +34,66 @@
 		<Sprite id="31_tank_cross_down_vừa" x="163" y="294"  w="32" h="32"/>
 		<Sprite id="32_tank_cross_down_nhạt" x="197" y="294"  w="32" h="32"/>
 		<Sprite id="33_tank_cross_down_low_đậm" x="129" y="328"  w="32" h="32"/>
-		<Sprite id="33_tank_cross_down_low_vừa" x="163" y="328"  w="32" h="32"/>
-		<Sprite id="33_tank_cross_down_low_nhạt" x="197" y="328"  w="32" h="32"/>
-		<Sprite id="34_tank_up_đậm" x="231" y="192"  w="32" h="32"/>
-		<Sprite id="35_tank_up_vừa" x="265" y="192"  w="32" h="32"/>
-		<Sprite id="36_tank_up_nhạt" x="299" y="192"  w="32" h="32"/>
-		<Sprite id="37_tank_down_đậm" x="231" y="294"  w="32" h="32"/>
-		<Sprite id="38_tank_down_vừa" x="265" y="294"  w="32" h="32"/>
-		<Sprite id="39_tank_down_nhạt" x="299" y="294"  w="32" h="32"/>
-		<Sprite id="40_tank_close_đậm" x="231" y="260"  w="32" h="32"/>
-		<Sprite id="41_tank_close_vừa" x="265" y="260"  w="32" h="32"/>
-		<Sprite id="42_tank_close_nhạt" x="299" y="260"  w="32" h="32"/>
-		<Sprite id="43_tank_open_đậm" x="231" y="226"  w="32" h="32"/>
-		<Sprite id="44_tank_open_vừa" x="265" y="226"  w="32" h="32"/>
-		<Sprite id="45_tank_open_nhạt" x="299" y="226"  w="32" h="32"/>
-		<Sprite id="46_cannon_left_nhạt" x="123" y="364"  w="32" h="32"/>
-		<Sprite id="47_cannon_left_vừa" x="157" y="364"  w="32" h="32"/>
-		<Sprite id="48_cannon_left_đậm" x="191" y="364"  w="32" h="32"/>
-		<Sprite id="49_cannon_cross_nhạt" x="225" y="364"  w="32" h="32"/>
-		<Sprite id="50_cannon_cross_vừa" x="259" y="364"  w="32" h="32"/>
-		<Sprite id="51_cannon_cross_đậm" x="293" y="364"  w="32" h="32"/>
-		<Sprite id="52_cannon_cross_high_nhạt" x="327" y="364"  w="32" h="32"/>
-		<Sprite id="53_cannon_cross_high_vừa" x="361" y="364"  w="32" h="32"/>
-		<Sprite id="54_cannon_cross_high_đậm" x="395" y="364"  w="32" h="32"/>
-		<Sprite id="55_shield_boss_stage_1_nhạt" x="461" y="244"  w="24" h="31"/>
-		<Sprite id="56_shield_boss_stage_1_vừa" x="488" y="244"  w="24" h="31"/>
-		<Sprite id="57_shield_boss_stage_1_đậm" x="515" y="244"  w="24" h="31"/>
-		<Sprite id="58_Falcon" x="123" y="397"  w="32" h="32"/>
-		<Sprite id="59_Falcon" x="157" y="397"  w="32" h="32"/>
-		<Sprite id="60_Falcon" x="191" y="397"  w="32" h="32"/>
-		<Sprite id="61_Falcon" x="225" y="397"  w="32" h="32"/>
-		<Sprite id="62_Falcon" x="259" y="397"  w="32" h="32"/>
-		<Sprite id="63_Falcon" x="293" y="397"  w="32" h="32"/>
-		<Sprite id="64_Falcon" x="327" y="397"  w="32" h="32"/>
-		<Sprite id="65_Aicraft_FLy" x="465" y="401"  w="24" h="15"/>
-		<Sprite id="66_Aicraft_B" x="491" y="401"  w="24" h="15"/>
-		<Sprite id="67_Aicraft_F" x="517" y="401"  w="24" h="15"/>
-		<Sprite id="68_Aicraft_L" x="543" y="401"  w="24" h="15"/>
-		<Sprite id="69_Aicraft_M" x="569" y="401"  w="24" h="15"/>
-		<Sprite id="70_Aicraft_R" x="595" y="401"  w="24" h="15"/>
-		<Sprite id="71_Aicraft_S" x="621" y="401"  w="24" h="15"/>
-		<Sprite id="72_Aicraft_Đỏ nhạt" x="650" y="401"  w="24" h="15"/>
-		<Sprite id="73_Aicraft_Đỏ đậm" x="680" y="401"  w="24" h="15"/>
-		<Sprite id="74_Aicraft_xám" x="710" y="401"  w="24" h="15"/>
-		
-		
+		<Sprite id="34_tank_cross_down_low_vừa" x="163" y="328"  w="32" h="32"/>
+		<Sprite id="35_tank_cross_down_low_nhạt" x="197" y="328"  w="32" h="32"/>
+		<Sprite id="36_tank_up_đậm" x="231" y="192"  w="32" h="32"/>
+		<Sprite id="37_tank_up_vừa" x="265" y="192"  w="32" h="32"/>
+		<Sprite id="38_tank_up_nhạt" x="299" y="192"  w="32" h="32"/>
+		<Sprite id="39_tank_down_đậm" x="231" y="294"  w="32" h="32"/>
+		<Sprite id="40_tank_down_vừa" x="265" y="294"  w="32" h="32"/>
+		<Sprite id="41_tank_down_nhạt" x="299" y="294"  w="32" h="32"/>
+		<Sprite id="42_tank_close_đậm" x="231" y="260"  w="32" h="32"/>
+		<Sprite id="43_tank_close_vừa" x="265" y="260"  w="32" h="32"/>
+		<Sprite id="44_tank_close_nhạt" x="299" y="260"  w="32" h="32"/>
+		<Sprite id="45_tank_open_đậm" x="231" y="226"  w="32" h="32"/>
+		<Sprite id="46_tank_open_vừa" x="265" y="226"  w="32" h="32"/>
+		<Sprite id="47_tank_open_nhạt" x="299" y="226"  w="32" h="32"/>
+		<Sprite id="48_cannon_left_nhạt" x="123" y="364"  w="32" h="32"/>
+		<Sprite id="49_cannon_left_vừa" x="157" y="364"  w="32" h="32"/>
+		<Sprite id="50_cannon_left_đậm" x="191" y="364"  w="32" h="32"/>
+		<Sprite id="51_cannon_cross_nhạt" x="225" y="364"  w="32" h="32" />
+		<Sprite id="52_cannon_cross_vừa" x="259" y="364"  w="32" h="32"/>
+		<Sprite id="53_cannon_cross_đậm" x="293" y="364"  w="32" h="32"/>
+		<Sprite id="54_cannon_cross_high_nhạt" x="327" y="364"  w="32" h="32"/>
+		<Sprite id="55_cannon_cross_high_vừa" x="361" y="364"  w="32" h="32"/>
+		<Sprite id="56_cannon_cross_high_đậm" x="395" y="364"  w="32" h="32"/>
+		<Sprite id="57_shield_boss_stage_1_nhạt" x="461" y="244"  w="24" h="31"/>
+		<Sprite id="58_shield_boss_stage_1_vừa" x="488" y="244"  w="24" h="31"/>
+		<Sprite id="59_shield_boss_stage_1_đậm" x="515" y="244"  w="24" h="31"/>
+		<Sprite id="60_Falcon" x="123" y="397"  w="32" h="32"/>
+		<Sprite id="61_Falcon" x="157" y="397"  w="32" h="32"/>
+		<Sprite id="62_Falcon" x="191" y="397"  w="32" h="32"/>
+		<Sprite id="63_Falcon" x="225" y="397"  w="32" h="32"/>
+		<Sprite id="64_Falcon" x="259" y="397"  w="32" h="32"/>
+		<Sprite id="65_Falcon" x="293" y="397"  w="32" h="32"/>
+		<Sprite id="66_Falcon" x="327" y="397"  w="32" h="32"/>
+		<Sprite id="67_Aicraft_FLy" x="465" y="401"  w="24" h="15"/>
+		<Sprite id="68_Aicraft_B" x="491" y="401"  w="24" h="15"/>
+		<Sprite id="69_Aicraft_F" x="517" y="401"  w="24" h="15"/>
+		<Sprite id="70_Aicraft_L" x="543" y="401"  w="24" h="15"/>
+		<Sprite id="71_Aicraft_M" x="569" y="401"  w="24" h="15"/>
+		<Sprite id="72_Aicraft_R" x="595" y="401"  w="24" h="15"/>
+		<Sprite id="73_Aicraft_S" x="621" y="401"  w="24" h="15"/>
+		<Sprite id="74_Aicraft_Đỏ nhạt" x="650" y="401"  w="24" h="15"/>
+		<Sprite id="75_Aicraft_Đỏ đậm" x="680" y="401"  w="24" h="15"/>
+		<Sprite id="76_Aicraft_xám" x="710" y="401"  w="24" h="15"/>
+		<Sprite id="77_Cannon_animation_đỏ" x="2" y="464"  w="32" h="16"/>
+		<Sprite id="78_Cannon_animation_cam" x="2" y="496"  w="32" h="16"/>
+		<Sprite id="79_Cannon_animation_da" x="2" y="528"  w="32" h="16"/>
+		<Sprite id="80_Cannon_animation_đỏ" x="34" y="456"  w="32" h="24"/>
+		<Sprite id="81_Cannon_animation_cam" x="34" y="488"  w="32" h="24"/>
+		<Sprite id="82_Cannon_animation_da" x="34" y="520"  w="32" h="24"/>
+		<Sprite id="83_Cannon_animation_đỏ" x="66" y="448"  w="32" h="32"/>
+		<Sprite id="84_Cannon_animation_cam" x="66" y="480" w="32" h="32"/>
+		<Sprite id="85_Cannon_animation_da" x="66" y="512"  w="32" h="32" />
+		<Sprite id="86_solider_die" x="1" y="550" w="24" h="24" />
+		<Sprite id="87_solider_die" x="27" y="548" w="28" h="28" />
+		<Sprite id="88_solider_die" x="57" y="546" w="32" h="32" />
+		<Sprite id="89_item_die" x="91" y="553" w="15" h="18" />
+		<Sprite id="90_item_die" x="108" y="549" w="23" h="27" />
+		<Sprite id="91_item_die" x="133" y="548" w="30" h="30" />
+		<Sprite id="92_bridge" x="1" y="589" w="32" h="31" />
+		<Sprite id="93_bridge" x="35" y="589" w="32" h="31" />
+		<Sprite id="94_bridge" x="69" y="589" w="32" h="31" />
 
-		
-		
-
-
-		
-		
-		
-
-		
-		
-
-
-		
 	</Textures>

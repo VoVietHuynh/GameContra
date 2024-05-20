@@ -15,10 +15,12 @@ private:
 
 public:
 	//Attack
-	bool isAttack, isAllowAttack;
+	bool isAttack, isAllowAttack, isReload;
+	float timeReload;
 
 	Player* player;
 	Keyboard* key;
+
 public:
 	PlayerController();
 	~PlayerController();
@@ -33,5 +35,7 @@ public:
 	void SwimState();
 	void DivingState();
 	void PlayControllerF();
+	void AttackState();
+	void ArrowState();
 	void Update(float gameTime, Keyboard* key);
 };

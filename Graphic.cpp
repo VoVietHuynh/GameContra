@@ -15,6 +15,8 @@ void Graphic::Init(HWND hind, int width, int height)
 	this->D3Ddev = NULL;
 	this->D3Dsprite = NULL;
 	this->mFont = NULL;
+	sound = new Sound(hind);
+	sound->Init_DirectSound();
 }
 
 Graphic::~Graphic()
@@ -24,7 +26,7 @@ Graphic::~Graphic()
 Graphic* Graphic::GetInstance()
 {
 	if (nullptr == _graphic) {
-		_graphic = new Graphic();
+		_graphic = new Graphic(); 
 	}
 	return _graphic;
 }

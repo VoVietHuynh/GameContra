@@ -1,55 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<Textures textureId="bill_animation">
-    		<Sprite id="0_stand" x="742" y="26"  w="24" h="34"/>
-		
-   		<Sprite id="1_run1" x="25" y="24"  w="20" h="34"/>
-		<Sprite id="2_run2" x="90" y="27"  w="20" h="34"/>
-		<Sprite id="3_run3" x="157" y="25"  w="20" h="34"/>
-		<Sprite id="4_run4" x="220" y="25"  w="20" h="34"/>
-		<Sprite id="5_run5" x="285" y="27"  w="20" h="34"/>
-		<Sprite id="6_run6" x="353" y="24"  w="20" h="34"/>
-		<Sprite id="7_jumping1" x="805" y="98"  w="20" h="20"/>
-		<Sprite id="8_jumping2" x="868" y="98"  w="20" h="20"/>
-		<Sprite id="9_jumping3" x="935" y="98"  w="20" h="20"/>  
-  		<Sprite id="10_jumping4" x="999" y="98"  w="20" h="20"/>
-		<Sprite id="11_laydown1" x="927" y="42"  w="32" h="16"/>
-		<Sprite id="12_laydown2" x="992" y="42"  w="32" h="16"/>
-		<Sprite id="13_run_shot_up1" x="25" y="90"  w="20" h="36"/>
-		<Sprite id="14_run_shot_up2" x="90" y="90"  w="20" h="36"/>
-		<Sprite id="15_run_shot_up3" x="158" y="90"  w="20" h="36"/>
-		<Sprite id="16_run_shot_up4" x="220" y="90"  w="20" h="36"/>
-		<Sprite id="17_run_shot_up5" x="285" y="90"  w="20" h="36"/>
-		<Sprite id="18_run_shot_up6" x="353" y="90"  w="20" h="36"/>  
- 		<Sprite id="19_run_shot_down1" x="415" y="90"  w="22" h="36"/>
-   		<Sprite id="20_run_shot_down2" x="480" y="90"  w="22" h="36"/>
-   		<Sprite id="21_run_shot_down3" x="546" y="90"  w="22" h="36"/>
-   		<Sprite id="22_run_shot_down4" x="610" y="90"  w="22" h="36"/>
-    		<Sprite id="23_run_shot_down5" x="675" y="90"  w="22" h="36"/>
-    		<Sprite id="24_run_shot_down6" x="741" y="90"  w="22" h="36"/>
-    		<Sprite id="25_shot_up1" x="808" y="14"  w="14" h="46"/>
-    		<Sprite id="26_shot_up2" x="873" y="15"  w="14" h="46"/>
-    		<Sprite id="27_run_shot1" x="415" y="25"  w="26" h="34"/>
-    		<Sprite id="28_run_shot2" x="480" y="26"  w="26" h="34"/>
-    		<Sprite id="29_run_shot3" x="547" y="25"  w="26" h="34"/>
-    		<Sprite id="30_run_shot4" x="610" y="26"  w="26" h="34"/>
-    		<Sprite id="31_run_shot5" x="675" y="27"  w="26" h="34"/>
-    		<Sprite id="32_run_shot6" x="742" y="26"  w="26" h="34"/>
-    		<Sprite id="33_swim_begin" x="25" y="167"  w="16" h="14"/>
-    		<Sprite id="34_swimming1" x="90" y="160"  w="16" h="16"/>
-    		<Sprite id="35_swimming2" x="155" y="157"  w="16" h="18"/>
-    		<Sprite id="36_diving1" x="610" y="167"  w="16" h="8"/>
-    		<Sprite id="37_diving2" x="675" y="166"  w="16" h="8"/>
-    		<Sprite id="38_swimming_shot1" x="213" y="157"  w="33" h="18"/>
-    		<Sprite id="39_swimming_shot2" x="278" y="154"  w="33" h="20"/>
-    		<Sprite id="40_swimming_shotup1" x="350" y="156"  w="20" h="18"/>
-    		<Sprite id="41_swimming_shotup2" x="415" y="155"  w="20" h="18"/>
-    		<Sprite id="42_swimming_shotup_stand1" x="480" y="146"  w="18" h="28"/>
-    		<Sprite id="43_swimming_shotup_stand2" x="545" y="145"  w="18" h="28"/>
-    		<Sprite id="44_dead1" x="804" y="162"  w="22" h="18"/>
-    		<Sprite id="45_dead2" x="871" y="160"  w="16" h="24"/>
-		<Sprite id="46_dead3" x="932" y="163"  w="22" h="18"/>
-		<Sprite id="47_dead4" x="1002" y="160"  w="16" h="24"/>
-		<Sprite id="48_shot_stand" x="547" y="25"  w="24" h="36"/>
+  <Sprite id="0_run1" x="16" y="11"  w="38" h="48"/>
+  <Sprite id="1_run2" x="80" y="11"  w="38" h="48"/>
+  <Sprite id="2_run3" x="145" y="11"  w="38" h="48"/>
+  <Sprite id="3_run4" x="210" y="11"  w="38" h="48"/>
+  <Sprite id="4_run5" x="275" y="11"  w="38" h="48"/>
+  <Sprite id="5_run6" x="340" y="11"  w="38" h="48"/>
+  <Sprite id="6_runshot1" x="405" y="11"  w="38" h="48" sx="18"  sy="23" />
+  <Sprite id="7_runshot2" x="469" y="11"  w="38" h="48"/>
+  <Sprite id="8_runshot3" x="535" y="11"  w="38" h="48"/>
+  <Sprite id="9_runshot_attack1" x="600" y="11"  w="38" h="48"  />
+  <Sprite id="10_runshot_attack2" x="665" y="11"  w="38" h="48"/>
+  <Sprite id="11_runshot_attack3" x="730" y="11"  w="38" h="48"/>
+  <Sprite id="12_standup1" x="795" y="11"  w="38" h="48"/>
+  <Sprite id="13_standup2" x="860" y="11"  w="38" h="48" sx="5"  sy="45"/>
+  <Sprite id="14_laydown1" x="921" y="11"  w="38" h="48" />
+  <Sprite id="15_laydown2" x="986" y="11"  w="38" h="48"  sx="18"  sy="9"/>
+  <Sprite id="16_run_shotup1" x="14" y="76"  w="38" h="48"/>
+  <Sprite id="17_run_shotup2" x="79" y="76"  w="38" h="48"/>
+  <Sprite id="18_run_shotup3" x="144" y="76"  w="38" h="48"/>
+  <Sprite id="19_run_shotup_attack1" x="209" y="76"  w="38" h="48"  sx="10"  sy="33"/>
+  <Sprite id="20_run_shotup_attack2" x="274" y="76"  w="38" h="48"/>
+  <Sprite id="21_run_shotup_attack3" x="340" y="76"  w="38" h="48"/>
+  <Sprite id="22_run_shotdown1" x="405" y="76"  w="38" h="48"/>
+  <Sprite id="23_run_shotdown2" x="470" y="76"  w="38" h="48"/>
+  <Sprite id="24_run_shotdown3" x="535" y="76"  w="38" h="48"/>
+  <Sprite id="25_run_shotdown_attack1" x="600" y="76"  w="38" h="48"  sx="10"  sy="14"/>
+  <Sprite id="26_run_shotdown_attack2" x="664" y="75"  w="38" h="48"/>
+  <Sprite id="27_run_shotdown_attack3" x="730" y="76"  w="38" h="48"/>
+  <Sprite id="28_jum1" x="794" y="70"  w="38" h="48" sx="1" sy="10"/>
+  <Sprite id="29_jum2" x="858" y="70"  w="38" h="48"/>
+  <Sprite id="30_jum3" x="925" y="70"  w="38" h="48"/>
+  <Sprite id="31_jum4" x="991" y="70"  w="38" h="48"/>
+  <Sprite id="32_swim_begin" x="14" y="132"  w="38" h="48"/>
+  <Sprite id="33_swimming1" x="80" y="127"  w="38" h="48"/>
+  <Sprite id="34_swimming2" x="145" y="127"  w="38" h="50"/>
+  <Sprite id="35_swimming_shot" x="210" y="127"  w="38" h="48" sx="14"  sy="8"/>
+  <Sprite id="36_swimming_shot_attack" x="275" y="127"  w="38" h="48" />
+  <Sprite id="37_swimming_shotup" x="339" y="127"  w="38" h="48"/>
+  <Sprite id="38_swimming_shotup_attack" x="405" y="127"  w="38" h="48"  sx="13"  sy="20"/>
+  <Sprite id="39_swimming_shotup_stand" x="470" y="127"  w="38" h="48"/>
+  <Sprite id="40_swimming_shotup_standattack" x="535" y="127"  w="38" h="48"  sx="4"  sy="29"/>
+  <Sprite id="41_dive1" x="599" y="127"  w="38" h="48"/>
+  <Sprite id="42_dive2" x="664" y="127"  w="38" h="48"/>
+  <Sprite id="43_climbashore" x="726" y="127"  w="38" h="48"/>
+  <Sprite id="44_dead1" x="790" y="135"  w="38" h="48"/>
+  <Sprite id="45_dead2" x="862" y="135"  w="38" h="48"/>
+  <Sprite id="46_dead3" x="927" y="135"  w="38" h="48"/>
+  <Sprite id="47_dead4" x="988" y="135"  w="38" h="48"/>
+  <Sprite id="48_stand1" x="535" y="11"  w="38" h="48"/>
+  <Sprite id="49_stand2" x="730" y="11"  w="38" h="48"  sx="14"  sy="21"/>
+  <Sprite id="50_falling" x="210" y="11"  w="38" h="48" sx="14"  sy="24"/>
+</Textures>		
 		
 
 

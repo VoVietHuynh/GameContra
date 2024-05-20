@@ -39,6 +39,7 @@ public:
 	bool isContains(RECT rect);
 	//Kích thước RECT màn hình tính trong World
 	RECT GetBoundViewport();
+	RECT GetBoundViewport1();
 
 	//Update View theo 1 đối tượng
 	void Update(float gameTime, Keyboard* key, D3DXVECTOR2 &posobject);

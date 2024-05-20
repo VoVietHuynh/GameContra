@@ -2,10 +2,16 @@
 #include"TinyXML\tinyxml.h"
 #include "Player.h"
 #include "ObjectManager.h"
+
 #pragma warning(disable : 4996)
 
 Map::Map()
 {
+	if (gSound == NULL)
+		gSound = Object::PlaySoundA("./Resource Files/Sound/BG_Map1.wav");
+	else
+		Object::PlaySoundA(gSound);
+
 	info = new InfoMap(MapXML);
 
 	this->tileset = new TileSet(info->tileCount, info->tileColumns, info->tileWidth, info->tileHeight);
@@ -28,7 +34,16 @@ Map::Map()
 	objectTag["Wall"] = OWall::Wall;
 	objectTag["Water"] = OWall::Water;
 	objectTag["Soldier"] = OEnemy::Soldier;
-	objectTag["rifleman"] = OEnemy::rifleman;
+	objectTag["RifleMan"] = OEnemy::Rifleman;
+	objectTag["R"] = OItem::R;
+	objectTag["M"] = OItem::M;
+	objectTag["S"] = OItem::S;
+	objectTag["F"] = OItem::F;
+	objectTag["L"] = OItem::L;
+	objectTag["T"] = OItem::T;
+	objectTag["Tank"] = OEnemy::Tank;
+	objectTag["Cannon"] = OEnemy::Cannon;
+	objectTag["Bridge"] = OWall::Brigde;
 
 	for (int i = 0; i < info->numObjectGroups; i++)
 	{
@@ -37,7 +52,8 @@ Map::Map()
 			MapObject* mapObject = info->ObjectGroups.at(i)->Objects.at(j);
 			Object* obj = CreateObject(mapObject);
 			//Thêm object vào cây nhị phân
-			//this->Tree->insertObject(obj);
+			if (obj != NULL)
+				this->Tree->insertObject(obj);
 		}
 	}
 
@@ -47,6 +63,12 @@ Map::Map()
 
 Map::~Map()
 {
+	if (gSound != NULL)
+	{
+		Object::StopSound(gSound);
+		delete gSound;
+		gSound = NULL;
+	}
 	delete tileset;
 	delete info;
 	int size = ListObject.size();
@@ -68,6 +90,7 @@ Object* Map::CreateObject(MapObject* _mapobject)
 
 	Object* obj;
 	Object::tag tagg = Object::GetTag(_mapobject->name);
+	int objectType = objectTag[_mapobject->name];
 	switch (tagg)
 	{
 	case Object::Player:
@@ -75,7 +98,7 @@ Object* Map::CreateObject(MapObject* _mapobject)
 		obj->SetPositionStart(pos);
 		break;
 	case Object::Wall:
-		switch (objectTag[_mapobject->name])
+		switch (objectType)
 		{
 		case OWall::Wall:
 			obj = new OWall();
@@ -83,28 +106,48 @@ Object* Map::CreateObject(MapObject* _mapobject)
 		case OWall::Water:
 			obj = new Water();
 			break;
+		case OWall::Brigde:
+			obj = new Bridge();
+			break;
 		default:
-			return new Object();
+			return NULL;
 		}
 		break;
 	case Object::Enemy:
-		switch (objectTag[_mapobject->name])
+		switch (objectType)
 		{
 		case OEnemy::Soldier:
 			obj = new OEnemy();
 			break;
-		case OEnemy::rifleman:
-			obj = new OEnemy();
+		case OEnemy::Rifleman:
+			obj = new RifleMan();
+			break;
+		case OEnemy::Tank:
+			obj = new Tank();
+			break;
+		case OEnemy::Cannon:
+			obj = new Cannon();
 			break;
 		default:
-			return new Object();
+			return NULL;
 		}
 		break;
+	case Object::Item:
+		objectType = objectTag[_mapobject->nameType];
+		if (_mapobject->name == "Falcon")
+		{
+			obj = new OItem();
+		}else if (_mapobject->name == "TankFalcon")
+		{
+			obj = new TankFalcon();
+		}
+		else return NULL;
+		break;
 	default:
-		return new Object();
+		return NULL;
 	}
 	obj->id = _mapobject->id;
-	obj->Init(pos, objectTag[_mapobject->name], _mapobject->kind);
+	obj->Init(pos, objectType, _mapobject->kind);
 	obj->SetPositionStart(pos);
 	obj->GetBound(_mapobject->width, _mapobject->height);
 

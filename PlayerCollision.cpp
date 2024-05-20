@@ -9,6 +9,9 @@ PlayerCollision::PlayerCollision()
 	_functionMap[Object::Running] = &PlayerCollision::RunCollision;
 	_functionMap[Object::Jumping] = &PlayerCollision::JumpCollision;
 	_functionMap[Object::Sitting] = &PlayerCollision::StandCollision;
+	_functionMap[Object::Falling] = &PlayerCollision::JumpCollision;
+	_functionMap[Object::Diving] = &PlayerCollision::StandCollision;
+	_functionMap[Object::Swimming] = &PlayerCollision::StandCollision;
 }
 
 PlayerCollision::~PlayerCollision()
@@ -19,12 +22,16 @@ void PlayerCollision::OnCollision()
 {
 	//Check player collision by state
 	PlayCollisionF();
-
 	//CheckAllState
 	switch (_obj->Tag)
 	{
 	case Object::Wall:
 		CheckCollisionWall();
+		break;
+	case Object::Enemy:
+	case Object::Bullet:
+	case Object::Item:
+		_side.x = Collision::NONE; _side.y = Collision::NONE;
 		break;
 	default:
 
@@ -43,22 +50,32 @@ void PlayerCollision::CheckCollisionWall(Object* _wall)
 	OWall* wall = dynamic_cast<OWall*>(_wall);
 	switch (wall->_walltype)
 	{
+	case OWall::Brigde:
+		_side.x = Collision::NONE;
 	case OWall::Wall:
-		if (_side.y == Collision::BOTTOM && player->State == Object::Jumping)
+		//
+		if (_side.x != Collision::NONE && wall->_kind == 1)//Leo len bo
 		{
-			player->State = Object::Standing;
+			player->_playerController->StandState();
+			player->SetPositionY(wall->GetBound().top);
 		}
-		if (wall->_kind == 0 && player->isFall &&
-			_side.y == Collision::BOTTOM && player->State == Object::Sitting)
+
+		if (_side.y == Collision::BOTTOM)
 		{
-			player->State = Object::Jumping;
-			player->SetPositionY(player->GetPosition().y - 2);
+			//Rơi
+			if (wall->_kind == 0 && player->isFall && player->State == Object::Sitting)
+			{
+				player->State = Object::Falling;
+				player->SetPositionY(player->GetPosition().y - 1);
+				break;
+			}
+			player->_playerController->StandState();
 		}
 		break;
 	case OWall::Water:
-		if (_side.y == Collision::BOTTOM && player->State == Object::Jumping)
+		if (_side.y == Collision::BOTTOM)
 		{
-			player->State = Object::Swimming;
+			player->_playerController->SwimState();
 		}
 		break;
 	default:
@@ -92,6 +109,6 @@ void PlayerCollision::RunCollision()
 {
 	if (_side.x != Collision::NONE)
 	{
-		player->State = Object::Standing;
+		//player->State = Object::Standing;
 	}
 }

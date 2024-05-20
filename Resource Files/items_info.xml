@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<Textures textureId="items_animation">
-    		<Sprite id="0_aircraft_B" x="357" y="10"  w="24" h="15"/>
-		<Sprite id="1_aircraft_F" x="383" y="10"  w="24" h="15"/>
-		<Sprite id="2_aircraft_L" x="409" y="10"  w="24" h="15"/>
-		<Sprite id="3_aircraft_M" x="435" y="10"  w="24" h="15"/>
-		<Sprite id="4_aircraft_R" x="461" y="10"  w="24" h="15"/>
-		<Sprite id="5_aircraft_S" x="487" y="10"  w="24" h="15"/>
-		<Sprite id="6_aircraft_Fly" x="331" y="11"  w="24" h="11"/>
-		<Sprite id="7_falcon" x="0" y="125"  w="32" h="32"/>
-		<Sprite id="8_falcon" x="34" y="125"  w="32" h="32"/>
-		<Sprite id="9_falcon" x="68" y="125"  w="32" h="32"/>
-		<Sprite id="10_falcon" x="102" y="125"  w="32" h="32"/>
-		<Sprite id="11_falcon" x="136" y="125"  w="32" h="32"/>
-		<Sprite id="12_falcon" x="170" y="125"  w="32" h="32"/>
-		<Sprite id="13_falcon" x="204" y="125"  w="32" h="32"/>
-		<Sprite id="14_normal_bullet" x="50" y="102"  w="8" h="8"/>
-		<Sprite id="15_normal_bullet_die" x="11" y="100"  w="10" h="10"/>
-		<Sprite id="16_normal_bullet_die" x="23" y="96"  w="14" h="14"/>
-
-
+		<Sprite id="0_aircraft_Normal" x="331" y="10"  w="24" h="16"/>
+    		<Sprite id="1_aircraft_B" x="357" y="10"  w="24" h="15"/>
+		<Sprite id="2_aircraft_F" x="383" y="10"  w="24" h="15"/>
+		<Sprite id="3_aircraft_L" x="409" y="10"  w="24" h="15"/>
+		<Sprite id="4_aircraft_M" x="435" y="10"  w="24" h="15"/>
+		<Sprite id="5_aircraft_R" x="461" y="10"  w="24" h="15"/>
+		<Sprite id="6_aircraft_S" x="487" y="10"  w="24" h="15"/>
+		<Sprite id="7_aircraft_OK_1" x="516" y="10"  w="24" h="15"/>
+		<Sprite id="8_aircraft_OK_2" x="546" y="10"  w="24" h="15"/>
+		<Sprite id="9_aircraft_OK_3" x="576" y="10"  w="24" h="15"/>
+		<Sprite id="10_Bullet_normal_1" x="52" y="119"  w="3" h="3"/>
+		<Sprite id="11_Bullet_normal_2" x="58" y="119"  w="3" h="3"/>
+		<Sprite id="12_Bullet_normal_3" x="64" y="119"  w="3" h="3"/>
+		<Sprite id="13_Bullet_M_R_S" x="69" y="105"  w="4" h="4"/>
+		<Sprite id="14_Bullet_F" x="42" y="115"  w="7" h="7"/>
+		<Sprite id="15_Bullet_L" x="24" y="115"  w="15" h="5"/>
+		<Sprite id="16_explosion_man_1"  x="0"  y="13"  w="25" h="25"/>
+		<Sprite id="17_explosion_man_2"  x="26"  y="11"  w="29" h="29"/>
+		<Sprite id="18_explosion_man_3"  x="56"  y="9"  w="33" h="33"/>
+		<Sprite id="19_explosion_tank_Falcon_1"  x="90"  y="16"  w="16" h="19"/>
+		<Sprite id="20_explosion_tank_Falcon_2"  x="107"  y="12"  w="24" h="28"/>
+		<Sprite id="21_explosion_tank_Falcon_3"  x="132"  y="11"  w="31" h="31"/>
+		<Sprite id="22_explosion_bullet"  x="40"  y="103"  w="6" h="6"/>
+		<Sprite id="23_Falcon_tank"  x="0"  y="125"  w="32" h="32"/>
+		<Sprite id="24_Falcon_tank"  x="34"  y="125"  w="32" h="32"/>
+		<Sprite id="25_Falcon_tank"  x="68"  y="125"  w="32" h="32"/>
+		<Sprite id="26_Falcon_tank"  x="102"  y="125"  w="32" h="32"/>
+		<Sprite id="27_Falcon_tank"  x="136"  y="125"  w="32" h="32"/>
+		<Sprite id="28_Falcon_tank"  x="170"  y="125"  w="32" h="32"/>
+		<Sprite id="29_Falcon_tank"  x="204"  y="125"  w="32" h="32"/>
+		
+		
 		
 	</Textures>

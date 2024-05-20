@@ -22,11 +22,10 @@ public:
 	bool isImmortal = false;
 	float immortalTime = 0;
 
-	vector <OBullet*> ListBullet;
-	vector <Object*> ItemBullet;
 public:
 	Player(); 
 	~Player();
+	void SetHP(int hp);
 
 	void Init();
 	void BeforeUpdate(float gameTime, Keyboard* key);
@@ -39,4 +38,6 @@ public:
 	void SetBound(float width, float height);
 	void Render(Viewport* viewport);
 	static Player* GetInstance();
+
+	int GetIndexGun();
 };

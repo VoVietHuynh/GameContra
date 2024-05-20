@@ -24,7 +24,7 @@ void DrawLine::Draw(D3DXVECTOR2 lines[], int count)
 	LPD3DXLINE line;
 	D3DXCreateLine(Graphic::GetInstance()->GetDevice(), &line);
 	line->SetWidth(2);
-	line->Draw(lines, count, D3DCOLOR_XRGB(255, 0, 0));//Màu đỏ
+	line->Draw(lines, count, _color);
 	line->Release();
 }
 
@@ -39,4 +39,14 @@ void DrawLine::DrawRect(RECT rect)
 					view->GetPositionViewport(D3DXVECTOR2(rect.left, rect.top))
 						};
 	Draw(lines, 5);
+}
+
+void DrawLine::SetColor(D3DCOLOR Color)
+{
+	_color = Color;
+}
+
+void DrawLine::SetColor(int r, int g, int b)
+{
+	_color = D3DCOLOR_XRGB(r, g, b);
 }
